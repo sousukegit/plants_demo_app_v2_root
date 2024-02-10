@@ -1,0 +1,52 @@
+#バージョン名は不要
+services:
+  db:
+    #最新imageを使用する
+    image: postgres:16.1-alpine
+    #dbは時間が重要なので環境変数に入れる
+    environment:
+      TZ: UTC
+      PGTZ: UTC
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+    #ホスト側のファイルをコンテナで使用する
+    volumes:
+      - ./api/tmp/db:/var/lib/postgresql/data
+
+  api:
+    #ベースイメージとなるDockerFileを指定
+    build:
+      context: ./api
+      #環境変数をDockerFileにわたす
+      args:
+        WORKDIR: $WORKDIR
+    
+    environment:
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+    volumes:
+      - ./api:/$WORKDIR
+      #apiサービス起動前にDBを起動という関係
+    depends_on:
+      - db
+    #公開用ポートを指定
+    #公開したいポート番号：デフォルトのコンテナポート
+    ports:
+      - "$API_PORT:3000"
+      
+    tty: true
+
+  front:
+    build:
+      context: ./front
+      args:
+        WORKDIR: $WORKDIR    
+    #コンテナで実行したいコマンド（CMD）
+    #nuxtを起動するcommand
+    command: yarn dev
+    volumes:
+      - ./front:/$WORKDIR
+    ports:
+      - "$FRONT_PORT:3000"
+      - '24678:24678'
+    tty: true
+    depends_on:
+      - api
