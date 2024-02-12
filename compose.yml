@@ -19,8 +19,7 @@ services:
       #環境変数をDockerFileにわたす
       args:
         WORKDIR: $WORKDIR
-    
-    environment:
+        environment:
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD
     volumes:
       - ./api:/$WORKDIR
@@ -33,61 +32,25 @@ services:
       - "$API_PORT:3000"      
     tty: true
 
-  # front:
-  #   build:
-  #     context: ./front
-  #     args:
-  #       WORKDIR: $WORKDIR    
-  #   #コンテナで実行したいコマンド（CMD）
-  #   #nuxtを起動するcommand
-  #   command: npm run dev
-  #   volumes:
-  #     - ./front:/$WORKDIR
-  #   ports:
-  #     - "$FRONT_PORT:3000"
-  #     - "24678:24678"
-  #   tty: true
-  #   depends_on:
-  #     - api
-
-  
   front:
     build:
       context: ./front
       args:
-        WORKDIR: $WORKDIR    
-#     #コンテナで実行したいコマンド（CMD）
-#     #nuxtを起動するcommand
-#     #command: npm run dev
-#     volumes:
-#       - ./front:/$WORKDIR:cached
-#       - nuxt_node_modules:/app/node_modules
-#     ports:
-#       - "$FRONT_PORT:3000"
-#       - "24678:24678"
-#     environment:
-#       - HOST=0.0.0.0
-#       - CHOKIDAR_USEPOLLING=true
-#     tty: true
-    # depends_on:
-    #   - api
-#     # command: sh -c "yarn && yarn dev"
-# volumes:
-#   nuxt_node_modules:
-
-  # front:
-    
-    # build: ./front
+        WORKDIR: $WORKDIR       
     volumes:
+      #ホストからコンテナの読み取りを最適化するためcacheオプションを記載
       - ./front:/app:cached
+      #node_moduleのボリュームはコンテナ上に置かないと起動が重くなる
       - nuxt_node_modules:/app/node_modules
     ports:
       - "$FRONT_PORT:3000"
+      #Nuxt3のホットリロードのポート
       - "24678:24678"
+    #tty（仮想端末）のプロセスを起動してあげることでコンテナの正常終了を伏せぐ
     tty: true
     environment:
-      # - HOST=0.0.0.0
-      - port=$FRONT_PORT    
+      - port=$FRONT_PORT   
+      #ホットリロード可能にするため追記 
       - CHOKIDAR_USEPOLLING=true
     depends_on:
       - api
