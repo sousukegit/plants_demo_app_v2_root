@@ -19,8 +19,9 @@ services:
       #環境変数をDockerFileにわたす
       args:
         WORKDIR: $WORKDIR
-        environment:
+    environment:
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+      API_DOMAIN: "localhost:$FRONT_PORT"       # 追加
     volumes:
       - ./api:/$WORKDIR
       #apiサービス起動前にDBを起動という関係
@@ -36,7 +37,8 @@ services:
     build:
       context: ./front
       args:
-        WORKDIR: $WORKDIR       
+        WORKDIR: $WORKDIR
+        API_URL: "http://localhost:$API_PORT" # 追加           
     volumes:
       #ホストからコンテナの読み取りを最適化するためcacheオプションを記載
       - ./front:/app:cached
