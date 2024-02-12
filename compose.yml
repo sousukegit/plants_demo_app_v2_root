@@ -30,23 +30,67 @@ services:
     #公開用ポートを指定
     #公開したいポート番号：デフォルトのコンテナポート
     ports:
-      - "$API_PORT:3000"
-      
+      - "$API_PORT:3000"      
     tty: true
 
+  # front:
+  #   build:
+  #     context: ./front
+  #     args:
+  #       WORKDIR: $WORKDIR    
+  #   #コンテナで実行したいコマンド（CMD）
+  #   #nuxtを起動するcommand
+  #   command: npm run dev
+  #   volumes:
+  #     - ./front:/$WORKDIR
+  #   ports:
+  #     - "$FRONT_PORT:3000"
+  #     - "24678:24678"
+  #   tty: true
+  #   depends_on:
+  #     - api
+
+  
   front:
     build:
       context: ./front
       args:
         WORKDIR: $WORKDIR    
-    #コンテナで実行したいコマンド（CMD）
-    #nuxtを起動するcommand
-    command: yarn dev
+#     #コンテナで実行したいコマンド（CMD）
+#     #nuxtを起動するcommand
+#     #command: npm run dev
+#     volumes:
+#       - ./front:/$WORKDIR:cached
+#       - nuxt_node_modules:/app/node_modules
+#     ports:
+#       - "$FRONT_PORT:3000"
+#       - "24678:24678"
+#     environment:
+#       - HOST=0.0.0.0
+#       - CHOKIDAR_USEPOLLING=true
+#     tty: true
+    # depends_on:
+    #   - api
+#     # command: sh -c "yarn && yarn dev"
+# volumes:
+#   nuxt_node_modules:
+
+  # front:
+    
+    # build: ./front
     volumes:
-      - ./front:/$WORKDIR
+      - ./front:/app:cached
+      - nuxt_node_modules:/app/node_modules
     ports:
       - "$FRONT_PORT:3000"
-      - '24678:24678'
+      - "24678:24678"
     tty: true
+    environment:
+      # - HOST=0.0.0.0
+      - port=$FRONT_PORT    
+      - CHOKIDAR_USEPOLLING=true
     depends_on:
       - api
+    command: sh -c "yarn && yarn dev"
+volumes:
+  nuxt_node_modules:
