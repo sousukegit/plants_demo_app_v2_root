@@ -21,7 +21,9 @@ services:
         WORKDIR: $WORKDIR
     environment:
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD
-      API_DOMAIN: "localhost:$FRONT_PORT"       # 追加
+      API_DOMAIN: "localhost:$FRONT_PORT"      
+      BASE_URL: "http://localhost:$API_PORT" 
+      # api\config\initializers\user_auth.rbの環境変数として追加
     volumes:
       - ./api:/$WORKDIR
       #apiサービス起動前にDBを起動という関係
@@ -56,6 +58,8 @@ services:
       - CHOKIDAR_USEPOLLING=true
     depends_on:
       - api
-    command: sh -c "yarn && yarn dev"
+    #command: sh -c "yarn && yarn dev"
+    #npmで起動するようにしてみる
+    command: sh -c "npm run dev"
 volumes:
   nuxt_node_modules:
