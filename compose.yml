@@ -1,16 +1,16 @@
 #バージョン名は不要
 services:
   db:
-    #最新imageを使用する
-    image: postgres:16.1-alpine
-    #dbは時間が重要なので環境変数に入れる
-    environment:
-      TZ: UTC
-      PGTZ: UTC
-      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
-    #ホスト側のファイルをコンテナで使用する
+    platform: linux/x86_64
+    image: mysql:8.0.28
+    command: --default-authentication-plugin=mysql_native_password
     volumes:
-      - ./api/tmp/db:/var/lib/postgresql/data
+      - "./db:/var/lib/mysql:delegated"
+    environment:
+      TZ: Asia/Tokyo
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+    ports:
+      - "3306:3306"
 
   api:
     #ベースイメージとなるDockerFileを指定
@@ -19,8 +19,9 @@ services:
       #環境変数をDockerFileにわたす
       args:
         WORKDIR: $WORKDIR
+    entrypoint: /usr/bin/entrypoint.sh
     environment:
-      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
       API_DOMAIN: "localhost:$FRONT_PORT"      
       BASE_URL: "http://localhost:$API_PORT" 
       # api\config\initializers\user_auth.rbの環境変数として追加
