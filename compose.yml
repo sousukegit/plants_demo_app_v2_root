@@ -59,7 +59,6 @@ services:
       - CHOKIDAR_USEPOLLING=true
     depends_on:
       - api
-    #command: sh -c "yarn && yarn dev"
     #npmで起動するようにしてみる
     command: sh -c "npm run dev"
 volumes:
