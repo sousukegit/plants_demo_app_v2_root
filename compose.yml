@@ -22,8 +22,8 @@ services:
     entrypoint: /usr/bin/entrypoint.sh
     environment:
       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
-      API_DOMAIN: "localhost:$FRONT_PORT"      
-      BASE_URL: "http://localhost:$API_PORT" 
+      API_DOMAIN: "localhost:$FRONT_PORT"
+      BASE_URL: "http://localhost:$API_PORT"
       # api\config\initializers\user_auth.rbの環境変数として追加
     volumes:
       - ./api:/$WORKDIR
@@ -33,7 +33,7 @@ services:
     #公開用ポートを指定
     #公開したいポート番号：デフォルトのコンテナポート
     ports:
-      - "$API_PORT:3000"      
+      - "$API_PORT:3000"
     tty: true
 
   front:
@@ -43,8 +43,8 @@ services:
         WORKDIR: $WORKDIR
         API_URL: "http://localhost:$API_PORT" # 追加
     volumes:
-      #ホストからコンテナの読み取りを最適化するためcacheオプションを記載
-      - ./front:/app:cached
+      #ホストからコンテナの書き込みを反映するためオプションを記載
+      - ./front:/app:delegated
       #node_moduleのボリュームはコンテナ上に置かないと起動が重くなる
       - nuxt_node_modules:/app/node_modules
     ports:
