@@ -1,17 +1,20 @@
 # Botanispot
 
-ログやBranchが複雑になるため、3つにリポジトリを分けて管理しております。
-root:
-front:
-back:
+ログやBranchが複雑になるため、3つにリポジトリを分けて管理しております。  
+root:[plants_demo_app_v2_root](https://github.com/sousukegit/plants_demo_app_v2_root)  
+front:[plants_demo_app_v2_front](https://github.com/sousukegit/plants_demo_app_v2_front)  
+back:[plants_demo_app_v2_back](https://github.com/sousukegit/plants_demo_app_v2_back)   
 
-フロント・バックエンドではそれぞれのコミットログやブランチ、
+フロント・バックエンドではそれぞれのコミットログやブランチを管理し、  
+
 Rootではフロント・バックエンドの最新のコミットファイルを管理しています。
 
 
 ## プロダクト
 プロダクト名：Botanispot
+
 リンク：[botanispot.com](https://botanispot.com)
+
 概要：観葉植物に特化した店舗情報を地図上で探すことができるユーザー投稿型サービス
 
 ※注釈
@@ -24,7 +27,9 @@ Rootではフロント・バックエンドの最新のコミットファイル�
 ## 開発背景
 
 私はGreenNeoSoulというブログで珍奇植物を家で楽しむ方法を発信しております。
+
 リンク：[greenneosoul.com](https://greenneosoul.com)
+
 そこの読者にアンケートをとり、ニーズとして多かった「実物を見て、安心して植物を選びたい」という声から生まれました。
 
 こういった声の背景は一部のものではありません。
