@@ -38,9 +38,10 @@ __探そう、欲しい一株を実物で。__
 
 そんな店舗とユーザーのニーズをマッチさせるため、アプリを開発しました。
 ### システム構成図
+![AWS](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/82526961-813a-4ad5-adcb-6c26e7574d49)  
 
 ###　ER図
-![table_ER](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/17f553d7-f9bd-495a-adf8-ac48eaf02941)
+![table_ER](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/17f553d7-f9bd-495a-adf8-ac48eaf02941)  
 
 ### 使用技術
 #### ■バックエンド
