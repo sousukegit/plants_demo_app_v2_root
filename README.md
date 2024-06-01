@@ -42,7 +42,8 @@ __探そう、欲しい一株を実物で。__
 そんな店舗とユーザーのニーズをマッチさせるため、アプリを開発しました。
 
 ### アプリケーションのイメージ
-![アプリ概要3倍 ](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/79f73e05-ae4f-4fa2-abc3-edc87553ad42)
+![アプリ概要3倍v2](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/20f5a873-31ba-4e74-be3c-069338046aca)
+
 
 ### システム構成図
 ![AWS](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/82526961-813a-4ad5-adcb-6c26e7574d49)  
