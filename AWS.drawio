@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="dmbm6BDHoPjLQ5Cpv6gt" name="ページ1">
-        <mxGraphModel dx="3562" dy="755" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="2665" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -175,9 +175,6 @@
                 </mxCell>
                 <mxCell id="208" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://nuxt.com/assets/design-kit/logo-green-black.svg;" parent="1" vertex="1">
                     <mxGeometry x="-560" y="872" width="128" height="32" as="geometry"/>
-                </mxCell>
-                <mxCell id="221" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=15;fontColor=#FF8000;" parent="1" source="187" target="187" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="227" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;fontColor=#FF8000;strokeColor=#000000;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="201" target="189" edge="1">
                     <mxGeometry width="80" relative="1" as="geometry">

@@ -4,6 +4,7 @@
 root:[plants_demo_app_v2_root](https://github.com/sousukegit/plants_demo_app_v2_root)  
 front:[plants_demo_app_v2_front](https://github.com/sousukegit/plants_demo_app_v2_front)  
 back:[plants_demo_app_v2_back](https://github.com/sousukegit/plants_demo_app_v2_back)   
+nginx:[plants_demo_app_v2_nginx](https://github.com/sousukegit/plants_demo_app_nginx) 
 
 フロント・バックエンドではそれぞれのコミットログやブランチを管理し、  
 Rootではフロント・バックエンドの最新のコミットファイルを管理しています。
@@ -13,35 +14,39 @@ Rootではフロント・バックエンドの最新のコミットファイル�
 プロダクト名：Botanispot  
 リンク：[botanispot.com](https://botanispot.com)  
 概要：観葉植物に特化した店舗情報を地図上で探すことができるユーザー投稿型サービス  
+
+※注釈  
+2024年5月時点、愛媛県内の店舗データのみになっております。  
+
 アイコン:  
 観葉植物と店舗の融合をイメージ  
 ![Botanispot _logoicon_Dark](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/000be58c-8719-4704-96dc-c750b0e4b211)  
-※注釈  
-2024年5月時点、愛媛県内の店舗データのみになっております。  
+
 コンセプト:  
 __探そう、欲しい一株を実物で。__  
 ![topberner](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/3d101023-ac5d-4917-bfd9-0fdcea65f445)  
-制作期間:約3か月(平日3時間、土日4-6時間)
 
+制作期間:約3か月(平日3時間、土日4-6時間)  
+平日：朝4時半に起きて会社までの2時間、帰ってから1時間  
+土日祝：4-6時間程度
 
 ##  アプリケーションのイメージ
 
 ## 開発背景
-
-私現在個人事業としてGreenNeoSoulというブログで珍奇植物を家で楽しむ方法を4年前から発信しております。  
+現在個人事業としてGreenNeoSoulというブログで珍奇植物を家で楽しむ方法を4年前から発信しております。  
 リンク：[greenneosoul.com](https://greenneosoul.com)
 
-そこの読者にアンケートをとり、ニーズとして多かった「実物を見て、安心して植物を選びたい」という声から生まれました。
+そこの読者にアンケートをとり、ニーズとして多かった「実物を見て、安心して植物を選びたい」という声から生まれました。  
 
-観葉植物業界はまだまだWeb上の発信が弱く、ネット上の情報が少ないです。
-すばらしい店舗があるにもかかわらず、ユーザーが店舗情報までたどり着けないことが多く、フリマなどのネット通販で購入するケースが多いです。
+観葉植物業界はまだまだWeb上の発信が弱く、ネット上の情報が少ないです。  
+すばらしい店舗があるにもかかわらず、ユーザーが店舗情報までたどり着けないことが多く、フリマなどのネット通販で高額購入するケースが多いです。
 
 そんな店舗とユーザーのニーズをマッチさせるため、アプリを開発しました。
 ### システム構成図
 ![AWS](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/82526961-813a-4ad5-adcb-6c26e7574d49)  
 
-###　ER図
-![table_ER](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/17f553d7-f9bd-495a-adf8-ac48eaf02941)  
+### ER図
+![ER](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/f255fc4c-b3c8-4f43-b47d-311fba407f1e)
 
 ### 使用技術
 #### ■バックエンド
@@ -64,7 +69,16 @@ __探そう、欲しい一株を実物で。__
 
 #### ■インフラ
 * Amazon Web Service
-（CloudFront、S3、Route53、ACM、ALB、RDS、ECS、ECR、CloudWatch、Anthena、VPC）
+    * CloudFront
+    * S3
+    * Route53
+    * ACM
+    * ALB
+    * RDS
+    * ECS
+    * ECR
+    * CloudWatch
+    * Anthena
 
 　
 ### 技術選定
