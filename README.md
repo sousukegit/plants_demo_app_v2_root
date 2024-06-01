@@ -6,7 +6,6 @@ front:[plants_demo_app_v2_front](https://github.com/sousukegit/plants_demo_app_v
 back:[plants_demo_app_v2_back](https://github.com/sousukegit/plants_demo_app_v2_back)   
 
 フロント・バックエンドではそれぞれのコミットログやブランチを管理し、  
-
 Rootではフロント・バックエンドの最新のコミットファイルを管理しています。
 
 
@@ -22,7 +21,8 @@ Rootではフロント・バックエンドの最新のコミットファイル�
 
 ## コンセプト
 
-探そう、欲しい一株を実物で。
+__探そう、欲しい一株を実物で。__
+![topberner](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/3d101023-ac5d-4917-bfd9-0fdcea65f445)
 
 ## 開発背景
 
