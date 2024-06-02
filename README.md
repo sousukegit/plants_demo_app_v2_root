@@ -62,7 +62,7 @@ TOPページにどんなアプリか一目でわかるようイメージ画像�
 すべての情報、写真一覧、口コミ一覧を直観的に切り替えれるようタブで切り分け。  
 ユーザーが見たい情報にすぐアクセスできるようにしました。
 ### 口コミCRUD機能  
-![機能　CRUD](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/1a4bb545-59af-4fb1-a974-d7387272a715)
+![機能　CRUD](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/1a4bb545-59af-4fb1-a974-d7387272a715)  
 ユーザーが訪れた店舗を評価できます。  
 加えて植物管理状態・価格・マニア度・種類など、観葉植物に特化した内容で情報精度を高めます。  
 
@@ -79,7 +79,7 @@ TOPページにどんなアプリか一目でわかるようイメージ画像�
 ![AWS](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/02d97cf7-c3e5-4cca-8b64-918966661e3a)  
 
 ## ER図
-![ER](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/f255fc4c-b3c8-4f43-b47d-311fba407f1e)
+![ER](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/f255fc4c-b3c8-4f43-b47d-311fba407f1e)  
 
 ## 使用技術
 ### ■バックエンド
@@ -161,7 +161,7 @@ TOPページにどんなアプリか一目でわかるようイメージ画像�
 
 
 ## 詳細をまとめたブログ記事
-リンク：[sousuke-neosoul.com](https://sousuke-neosoul.com/sousuke_portfolio_botanispot/)
+リンク：[sousuke-neosoul.com](https://sousuke-neosoul.com/sousuke_portfolio_botanispot/)  
 
 
 
