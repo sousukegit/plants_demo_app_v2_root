@@ -31,7 +31,7 @@ __探そう、欲しい一株を実物で。__
 土日祝：4-6時間程度
 
 ## アプリケーション全体のイメージ
-![アプリ概要3倍v2](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/20f5a873-31ba-4e74-be3c-069338046aca)
+![アプリ概要3倍v2](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/20f5a873-31ba-4e74-be3c-069338046aca)  
 ログインし、店舗を探して観葉植物に特化した情報を参照できます。  
 一店舗に一回のみ、ユーザーが口コミを投稿できます。  
 
