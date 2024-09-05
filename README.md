@@ -3,9 +3,9 @@
 ログやブランチが複雑になるため、rootを配下に、  
 3つにリポジトリを分けて管理しております。  
 root:[plants_demo_app_v2_root](https://github.com/sousukegit/plants_demo_app_v2_root)  
-front:[plants_demo_app_v2_front](https://github.com/sousukegit/plants_demo_app_v2_front)  
-back:[plants_demo_app_v2_back](https://github.com/sousukegit/plants_demo_app_v2_back)   
-nginx:[plants_demo_app_v2_nginx](https://github.com/sousukegit/plants_demo_app_nginx) 
+┣front:[plants_demo_app_v2_front](https://github.com/sousukegit/plants_demo_app_v2_front)  
+┣back:[plants_demo_app_v2_back](https://github.com/sousukegit/plants_demo_app_v2_back)   
+┗nginx:[plants_demo_app_v2_nginx](https://github.com/sousukegit/plants_demo_app_nginx) 
 
 フロントエンド・バックエンドではそれぞれのコミットログやブランチを管理し、  
 Rootではそれぞれの最新のコミットファイルを管理しています。
