@@ -1,4 +1,4 @@
-# ポートフォリオ紹介
+# アプリ紹介
 
 ログやブランチが複雑になるため、rootを配下に、  
 3つにリポジトリを分けて管理しております。  
@@ -10,7 +10,7 @@ nginx:[plants_demo_app_v2_nginx](https://github.com/sousukegit/plants_demo_app_n
 フロントエンド・バックエンドではそれぞれのコミットログやブランチを管理し、  
 Rootではそれぞれの最新のコミットファイルを管理しています。
 
-## ポートフォリオ
+## 作成したアプリ
 
 プロダクト名：Botanispot  
 リンク：[botanispot.com](https://botanispot.com)  
@@ -37,7 +37,7 @@ __探そう、欲しい一株を実物で。__
 一店舗に一回のみ、ユーザーが口コミを投稿できます。  
 
 ## 開発背景
-現在個人事業としてGreenNeoSoulというブログで珍奇植物を家で楽しむ方法を4年前から発信しております。  
+GreenNeoSoulというブログで珍奇植物を家で楽しむ方法を4年前から発信しております。  
 リンク：[greenneosoul.com](https://greenneosoul.com)
 ![2208_gns_logo_kettei-03](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/d7d53db4-6c44-40df-b19c-736493a6d9bb)  
 そこの読者にアンケートをとり、ニーズとして多かった「実物を見て、安心して植物を選びたい」という声から生まれました。  
@@ -159,9 +159,6 @@ TOPページにどんなアプリか一目でわかるようイメージ画像�
 * 企業の採用率が高く、現場で使用されているインフラ知識を深めることができること。  
 * AzureやGCPと比べ、サービスの種類が豊富でサードパーティーとの連携も充実しているため、アプリ開発・運用に必要なサービスがそろっていること  
 
-
-## 詳細をまとめたブログ記事
-リンク：[sousuke-neosoul.com](https://sousuke-neosoul.com/sousuke_portfolio_botanispot/)  
 
 
 
