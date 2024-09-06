@@ -76,8 +76,7 @@ TOPページにどんなアプリか一目でわかるようイメージ画像�
 再訪問後も保たれるようCookieでブラウザ上に状態を保存。  
 
 ## システム構成図
-![AWS](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/02d97cf7-c3e5-4cca-8b64-918966661e3a)  
-
+![AWS](https://github.com/user-attachments/assets/a2de4f7b-9e37-4b1a-b4da-bc0424d17a32)  
 ## ER図
 ![ER](https://github.com/sousukegit/plants_demo_app_v2_root/assets/135125480/f255fc4c-b3c8-4f43-b47d-311fba407f1e)  
 
